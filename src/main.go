@@ -1,23 +1,16 @@
 package main
 
-import "fmt"
-
-func normalFunction(message string){
-	fmt.Println(message)
-}
-
-func threeArguments(a,b int, c string) {
-	fmt.Println(a,b,c)
-}
-
-func returnValue (a int) int {
-	return a * 2
-}
-
-func doubleReturn(a int) (c,d int) {
-	return a, a*2
-}
+import (
+	pk "curso_golang_platzi/src/mypackage"
+	"fmt"
+)
 
 func main() {
-	
+	var myCar pk.CarPublic
+	myCar.Brand = "Fearri"
+	myCar.Year = 2020
+	fmt.Println(myCar)
+
+	pk.PrintMessage("hellow world")
+
 }

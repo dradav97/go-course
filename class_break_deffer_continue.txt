@@ -1,0 +1,30 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	// Defer
+	// defer execute the last functions before the finish program,
+	defer fmt.Println("hellow")
+	fmt.Println("world")
+
+	// continue and break 
+
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+
+		if i == 2 {
+			fmt.Println("Is 2")
+			continue
+		}
+
+		if i == 8 {
+			fmt.Println("Break")
+			break
+		}
+	}
+
+
+
+}
